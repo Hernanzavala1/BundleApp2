@@ -7,3 +7,6 @@ and protected up in the database. After the user logs in they will come across t
 
 
 THIS IS THE REPOSITORY WHERE ALL THE CODE WORKS!
+Example Account :
+username: test1@hotmail.com
+paswword: 123456
