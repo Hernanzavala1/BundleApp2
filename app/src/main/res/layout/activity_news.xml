@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefresh"
+    tools:context=".views.newsActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:id="@+id/diagonal_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="1dp"
+            app:diagonal_angle="5"
+            app:diagonal_direction="left"
+            app:diagonal_position="bottom">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/kbv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/crazy_supra" />
+
+            <TextView
+                android:id="@+id/top_article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|left"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"
+                android:textColor="@color/WhiteTextColor"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <Spinner
+                android:id="@+id/drop_Down_News_Source"
+                android:layout_width="150dp"
+                android:layout_height="37dp"
+                android:layout_gravity="top|right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@id/diagonal_layout"
+            android:layout_marginTop="10dp"
+
+            ></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

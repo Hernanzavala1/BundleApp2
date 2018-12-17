@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+   android:background="@drawable/weatherbackground1"
+    xmlns:tools="http://schemas.android.com/tools"
+ >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbarColor"
+        app:titleTextColor="@color/textColor"
+        ></android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/CurrentWeatherIcon"
+        android:layout_width="100sp"
+        android:layout_height="115sp"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:backgroundTint="@color/darkColor"
+        android:src="@drawable/weather" />
+
+
+
+    <LinearLayout
+        android:id="@+id/WeatherInfoLayout"
+        android:layout_width="357dp"
+        android:layout_height="357dp"
+        android:layout_below="@id/CurrentWeatherIcon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="4"
+        tools:context=".views.Weather">
+
+        <TextView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:gravity="top"
+        android:text="Today's Weather"
+        android:textAlignment="center"
+        android:textColor="@color/WhiteTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/Header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="top"
+            android:textAlignment="center"
+            android:textColor="@color/WhiteTextColor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/dateTextfield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/WhiteTextColor"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/current_temp"
+                android:layout_width="119dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="70"
+                android:textAllCaps="true"
+                android:textColor="@color/WhiteTextColor"
+                android:textSize="36sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/HummidityLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Humidity:"
+                    android:textColor="@color/WhiteTextColor"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hummidityAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/HummidityLabel"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_toEndOf="@+id/HummidityLabel"
+                    android:layout_toRightOf="@+id/HummidityLabel"
+                    android:text="96%"
+                    android:textColor="@color/WhiteTextColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/PrecipitacionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/HummidityLabel"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="-15dp"
+                    android:layout_marginTop="62dp"
+                    android:text="Pressure:"
+                    android:textColor="@color/WhiteTextColor"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/precipitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/PrecipitacionLabel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toRightOf="@id/PrecipitacionLabel"
+                    android:text="0%"
+                    android:textColor="@color/WhiteTextColor"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/windLabel"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/PrecipitacionLabel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Wind:"
+                    android:textColor="@color/WhiteTextColor"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/windspeed_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/precipitation"
+                    android:layout_marginLeft="41dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/windLabel"
+                    android:text="8 mph"
+                    android:textColor="@color/WhiteTextColor"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:backgroundTint="@color/darkColor"
+                    android:id="@+id/weatherDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_below="@+id/windspeed_textview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/WhiteTextColor"
+                    android:textSize="17sp"
+                    android:text="weather Description" />
+
+                <TextView
+                    android:layout_below="@+id/weatherDesc"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTintMode="src_atop"
+                    android:backgroundTint="@color/darkColor "
+                    android:textStyle="bold"
+                    android:textColor="@color/WhiteTextColor"
+                    android:text="hello"
+                    android:textAlignment="center"
+                    android:textSize="17dp"
+                    android:id="@+id/weatherdesc"
+                    android:layout_width="260dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:ems="10"
+                    android:inputType="textMultiLine" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

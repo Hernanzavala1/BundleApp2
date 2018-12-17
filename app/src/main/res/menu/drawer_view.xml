@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    </group>
+
+    <item
+
+        android:title="weather">
+        <menu>
+            <item android:title="Today!"
+                android:id="@+id/weather"
+                android:icon="@drawable/ic_weather_icon"                >
+            </item>
+
+        </menu>
+
+    </item>
+
+    <item
+
+        android:title="news">
+
+        <menu>
+            <item
+                android:id="@+id/News"
+                android:title="local News"
+                android:icon="@drawable/ic_news"
+                >
+            </item>
+        </menu>
+
+    </item>
+
+    <item
+        android:icon="@drawable/ic_news"
+        android:id="@+id/Events"
+        android:title="Community Events">
+    </item>
+    <item
+        android:id="@+id/LogOut"
+        android:title="Log Out"
+        android:icon="@drawable/ic_settings"/>
+
+
+</menu>
